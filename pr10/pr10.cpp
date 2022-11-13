@@ -16,28 +16,28 @@ int main()
     int num = 0 , a, b, c;
     aaaaa = new graph(8);
 
-    aaaaa->add_edge(1, 2, 23);
-    aaaaa->add_edge(2, 1, 23);
-    aaaaa->add_edge(1, 3, 12);
-    aaaaa->add_edge(3, 1, 12);
-    aaaaa->add_edge(2, 3, 25);
-    aaaaa->add_edge(2, 5, 22);
-    aaaaa->add_edge(2, 8, 35);
-    aaaaa->add_edge(3, 2, 25);
-    aaaaa->add_edge(3, 4, 18);
-    aaaaa->add_edge(4, 3, 18);
-    aaaaa->add_edge(4, 6, 20);
-    aaaaa->add_edge(5, 6, 23);
-    aaaaa->add_edge(5, 7, 14);
-    aaaaa->add_edge(5, 2, 22);
-    aaaaa->add_edge(6, 4, 20);
-    aaaaa->add_edge(6, 5, 23);
-    aaaaa->add_edge(6, 7, 24);
-    aaaaa->add_edge(7, 6, 24);
-    aaaaa->add_edge(7, 8, 16);
-    aaaaa->add_edge(7, 5, 14);
-    aaaaa->add_edge(8, 7, 16);
-    aaaaa->add_edge(8, 2, 35);
+    aaaaa->add_edge(1-1, 2-1, 23);
+    aaaaa->add_edge(2-1, 1-1, 23);
+    aaaaa->add_edge(1-1, 3-1, 12);
+    aaaaa->add_edge(3-1, 1-1, 12);
+    aaaaa->add_edge(2-1, 3-1, 25);
+    aaaaa->add_edge(2-1, 5-1, 22);
+    aaaaa->add_edge(2-1, 8-1, 35);
+    aaaaa->add_edge(3-1, 2-1, 25);
+    aaaaa->add_edge(3-1, 4-1, 18);
+    aaaaa->add_edge(4-1, 3-1, 18);
+    aaaaa->add_edge(4-1, 6-1, 20);
+    aaaaa->add_edge(5-1, 6-1, 23);
+    aaaaa->add_edge(5-1, 7-1, 14);
+    aaaaa->add_edge(5-1, 2-1, 22);
+    aaaaa->add_edge(6-1, 4-1, 20);
+    aaaaa->add_edge(6-1, 5-1, 23);
+    aaaaa->add_edge(6-1, 7-1, 24);
+    aaaaa->add_edge(7-1, 6-1, 24);
+    aaaaa->add_edge(7-1, 8-1, 16);
+    aaaaa->add_edge(7-1, 5-1, 14);
+    aaaaa->add_edge(8-1, 7-1, 16);
+    aaaaa->add_edge(8-1, 2-1, 35);
     for(;;)
     {
         cout << "Enter num of operatoin" << endl;
@@ -57,7 +57,7 @@ int main()
             aaaaa->print();
             break;
 	    case 4:
-            cout << "Enter starting point";
+            cout << "Enter starting point"<<endl;
             cin >> a;
             aaaaa->get_gamilton_path(pa, a - 1, a - 1);
             pa.clear();

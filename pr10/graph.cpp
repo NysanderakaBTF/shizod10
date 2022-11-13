@@ -28,7 +28,7 @@ void graph::get_gamilton_path(list<int> pa, int cur, int dest)
 	for(size_t i=0;i<nodelist[cur].size();i++)
 	{
 		if(cur == dest && pa.size()==nodelist.size()+1){
-			for_each(pa.begin(), pa.end(), [](int a) {cout << " " << a; });
+			for_each(pa.begin(), pa.end(), [](int a) {cout << " " << a+1; });
 			cout << endl;
 			return;
 		}
@@ -77,9 +77,9 @@ void graph::construct()
 	cout << "Enter num of tops" << endl;
 	int n; cin >> n;
 	this->nodelist.resize(n);
+	cout << "Enter sourse destination and weight; To end: -1" << endl;
 	for (;;)
 	{
-		cout << "Enter sourse destination and weight; To end: -1" << endl;
 		int a, b, c;
 		cin >> a;
 		if (a != -1)
@@ -97,9 +97,9 @@ void graph::print()
 	cout << "Vertex\tNeightbors(weight)"<<endl;
 	for (int i = 0; i < nodelist.size(); ++i)
 	{
-		cout << i << '\t';
+		cout << i+1 << '\t';
 		for_each(nodelist[i].begin(), nodelist[i].end(), [](const pair<int, int> & q){
-				cout << q.first << "(" << q.second << ")" << " ";
+				cout << q.first+1 << "(" << q.second << ")" << " ";
 		});
 		cout << endl;
 	}
